@@ -2,12 +2,12 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 
-class TenPro extends Component {
+class OwnPro extends Component {
     constructor() {
         super()
         this.state = {
             fetchInProgress: true,
-            tenant: [],
+            owner: [],
         }
         this.displayContent = this.displayContent.bind(this)
     }
@@ -22,21 +22,21 @@ class TenPro extends Component {
         } else {
             return (
                 <div>
-                    <h3>Tenant: {this.state.tenant.name}</h3>
-                    <br />Tenant ID: {this.state.tenant.tenantId}
+                    <h3>Owner: {this.state.owner.name}</h3>
+                    <br />Owner ID: {this.state.owner.ownerId}
                 </div>
             )
         }
     }
 
     componentDidMount() {
-        axios.get("http://localhost:3000/api/Tenant/TEN1")
+        axios.get("http://localhost:3000/api/Owner/OWN1")
         .then(response => {
             this.setState({
                 fetchInProgress: false,
-                tenant: response.data
+                owner: response.data
             })
-            console.log(this.state.tenant)
+            console.log(this.state.owner)
         })
         .catch(err => {
             console.log(err)
@@ -49,7 +49,7 @@ class TenPro extends Component {
     render() {
         return(
             <div>
-                <h2>Tenant Profile Page</h2>
+                <h2>Owner Profile Page</h2>
                 {this.displayContent()}
                 <br /><br />
                 <Link to="/">Home</Link>    
@@ -58,4 +58,4 @@ class TenPro extends Component {
     }
 }
 
-export default TenPro
+export default OwnPro

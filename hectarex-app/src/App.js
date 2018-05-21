@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Router, Route } from 'react-router-dom';
 import history from './history';
 import TenPro from './components/TenPro';
+import OwnPro from './components/OwnPro';
 import Home from './components/Home';
 import logo from './logo.png';
 import './App.css';
@@ -18,6 +19,7 @@ class App extends Component {
         <Router history={history}>
           <div>
           <Route path="/" exact component={Home} />
+          <Route path="/owner" component={OwnPro} />
           <Route path="/tenant" component={TenPro} />
           </div>
         </Router>

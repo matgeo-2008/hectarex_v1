@@ -14,6 +14,8 @@ class Home extends Component {
         return(
             <div>
                 <h3>Home</h3>
+                <Link to="/owner">Owner Profile</Link>
+                <br /><br />
                 <Link to="/tenant">Tenant Profile</Link>
             </div>
         )
