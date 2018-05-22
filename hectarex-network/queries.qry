@@ -1,0 +1,14 @@
+
+query selectPropertiesByOwner {
+  description: "Select all Properties based on their Owner"
+  statement:
+      SELECT com.hectarex.network.Property
+          WHERE (owner == _$owner)
+}
+
+query selectRentAgreementByOwner {
+  description: "Select all Rent Agreements based on their Owner"
+  statement:
+      SELECT com.hectarex.network.RentAgreement
+          WHERE (owner == _$owner)
+}

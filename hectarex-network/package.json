@@ -3,7 +3,7 @@
     "composer": "^0.19.5"
   },
   "name": "hectarex-network",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "New HectareX Rent Payment System",
   "scripts": {
     "prepublish": "mkdirp ./dist && composer archive create --sourceType dir --sourceName . -a ./dist/hectarex-network.bna",
